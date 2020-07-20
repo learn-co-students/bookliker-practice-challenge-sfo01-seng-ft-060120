@@ -15,6 +15,14 @@
         {
           "id": 8,
           "username": "maverick"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -214,8 +222,52 @@
         {
           "id": 10,
           "username": "macejkovic"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
+    },
+    {
+      "title": "Hunger Games",
+      "subtitle": "",
+      "description": "to the death",
+      "author": "",
+      "img_url": "https://www.gstatic.com/tv/thumb/v22vodart/8648012/p8648012_v_v8_ah.jpg",
+      "users": [],
+      "id": 12
+    },
+    {
+      "title": "Hunger Games 2",
+      "subtitle": "",
+      "description": "huge",
+      "author": "",
+      "img_url": "https://www.gstatic.com/tv/thumb/v22vodart/8648012/p8648012_v_v8_ah.jpg",
+      "users": [],
+      "id": 13
+    },
+    {
+      "title": "Hunger Games 3",
+      "subtitle": "",
+      "description": "tall, handsome, funny",
+      "author": "",
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/9/9d/Mockingjay_Part_2_Poster.jpg",
+      "users": [
+        {
+          "id": 1,
+          "username": "pouros"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
+        }
+      ],
+      "id": 14
     }
   ],
   "users": [
