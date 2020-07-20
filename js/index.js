@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
             
             li.addEventListener('click', function(event){
                 let show = document.getElementById('show-panel')
-                let div = document.createElement('div')
 
                 show.innerHTML = `<img src=${book.img_url}><h2>${book.title}</h2><h2>${book.author}</h2><button class='like'>Like</button>`
                 
@@ -28,31 +27,29 @@ document.addEventListener("DOMContentLoaded", function() {
                     show.appendChild(ul)
                 })
                 let button = document.querySelector('.like')
-                button.addEventListener('click', (e) => likes(e, book))
+                button.addEventListener('click', () => likes(book))
             })
         })
     }
 
-    function likes(e, book){
-        e.preventDefault()
+    function likes(book){
+        let users = book.users
+        let currentUser = {"id":1, "username":"pouros"}
+        users.push(currentUser)
+        let show = document.getElementById('show-panel')
+        let ul = document.querySelector('.users')
+        let list = document.createElement('li')
+        list.innerText = currentUser.username
+        ul.appendChild(list)
+        show.appendChild(ul)
+
         fetch(`http://localhost:3000/books/${book.id}`, {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json",
                 Accept: "application/json"
             },
-            body: JSON.stringify({username: book.users.username, id: book.users.id})
-        })
-        .then(response => response.json())
-        .then(data => {
-            let show = document.getElementById('show-panel')
-            let ul = document.querySelector('.users')
-            let list = document.createElement('li')
-            console.log(book.users)
-            list.innerText = book.users.username
-            ul.appendChild(list)
-            show.appendChild(ul)
+            body: JSON.stringify({ users:book.users})
         })
     }
-
 })
